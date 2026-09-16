@@ -1,59 +1,58 @@
 # [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
 
-### 🏷️ Difficulty: `Easy` | 🌐 Platform: `LeetCode` | ⚡ Language: `JAVA`
+### 🏷️ Difficulty: `Medium` | 🌐 Platform: `LeetCode` | ⚡ Language: `JAVA`
 
 ---
 
 ### 📝 Problem Description
-You are given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
-
-You may assume that each input would have exactly one solution, and you may not use the same element twice.
-
-You can return the answer in any order.
+Given a string s, find the length of the longest substring without duplicate characters.
 
  
 Example 1:
 
-Input: nums = [2,7,11,15], target = 9
-Output: [0,1]
-Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
+Input: s = "abcabcbb"
+Output: 3
+Explanation: The answer is "abc", with the length of 3. Note that "bca" and "cab" are also correct answers.
 
 
 Example 2:
 
-Input: nums = [3,2,4], target = 6
-Output: [1,2]
+Input: s = "bbbbb"
+Output: 1
+Explanation: The answer is "b", with the length of 1.
 
 
 Example 3:
 
-Input: nums = [3,3], target = 6
-Output: [0,1]
+Input: s = "pwwkew"
+Output: 3
+Explanation: The answer is "wke", with the length of 3.
+Notice that the answer must be a substring, "pwke" is a subsequence and not a substring.
 
 
  
 Constraints:
 
 
-	2 <= nums.length <= 104
-	-109 <= nums[i] <= 109
-	-109 <= target <= 109
-	Only one valid answer exists.
-
-
- 
-Follow-up: Can you come up with an algorithm that is less than O(n2) time complexity?
+	0 <= s.length <= 105
+	s consists of English letters, digits, symbols and spaces.
 
 ---
 
 ### 💻 Solution (JAVA)
 ```java
-[2,7,11,15]
-9
-[3,2,4]
-6
-[3,3]
-6
+"abcabcbb"
+"bbbbb"
+"pwwkew"
+"abcabcbb"
+"bbbbb"
+"pwwkew"
+3
+1
+3
+3
+1
+3
 ```
 
 ---

@@ -11,25 +11,25 @@ Given the problem statement, implement the optimal solution passing all test cas
 
 ### 💻 Solution (JAVA)
 ```java
-1class Solution {
-2    public int lengthOfLongestSubstring(String s) {
-3        int start = 0;
-4        int maxLen = 0;
-5        Set<Character> set = new HashSet<>();
-6
-7        for(int end = 0; end < s.length(); end++){
-8            char c = s.charAt(end);
-9
-10            while(set.contains(c)){
-11                set.remove(s.charAt(start));
-12                start++;
-13            }
-14            set.add(c);
-15            maxLen = Math.max(maxLen, end - start + 1);
-16        }
-17        return maxLen;
-18    }
-19}
+class Solution {
+    public int lengthOfLongestSubstring(String s) {
+        int start = 0;
+        int maxLen = 0;
+        Set<Character> set = new HashSet<>();
+
+        for(int end = 0; end < s.length(); end++){
+            char c = s.charAt(end);
+
+            while(set.contains(c)){
+                set.remove(s.charAt(start));
+                start++;
+            }
+            set.add(c);
+            maxLen = Math.max(maxLen, end - start + 1);
+        }
+        return maxLen;
+    }
+}
 ```
 
 ---
